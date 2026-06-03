@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Stack } from 'expo-router';
-import { Filter, Download } from 'lucide-react-native';
+import { Download } from 'lucide-react-native';
 import Colors from '@/constants/colors';
 import TransactionItem from '@/components/TransactionItem';
 import { transactions, formatCurrency } from '@/mocks/bankData';

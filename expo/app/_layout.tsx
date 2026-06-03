@@ -88,6 +88,15 @@ function RootLayoutNav() {
           headerTintColor: Colors.gray[800],
         }} 
       />
+      <Stack.Screen 
+        name="overseas" 
+        options={{ 
+          title: "Luar Negeri",
+          headerStyle: { backgroundColor: "#6366F1" },
+          headerTintColor: "#fff",
+          headerTitleStyle: { fontWeight: '600' as const },
+        }} 
+      />
     </Stack>
   );
 }

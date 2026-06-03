@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Stack } from 'expo-router';
-import { ArrowRightLeft, Tag, Info, Check, Circle } from 'lucide-react-native';
+import { ArrowRightLeft, Tag, Info } from 'lucide-react-native';
 import Colors from '@/constants/colors';
 import { notifications, Notification } from '@/mocks/bankData';
 import * as Haptics from 'expo-haptics';

@@ -4,7 +4,7 @@ import Colors from '@/constants/colors';
 import { balanceHistory, formatCurrency } from '@/mocks/bankData';
 
 export default function BalanceChart() {
-  const maxAmount = Math.max(...balanceHistory.map(item => item.amount));
+  const maxAmount = balanceHistory.length > 0 ? Math.max(...balanceHistory.map(item => item.amount)) : 1;
   
   return (
     <View style={styles.container}>
@@ -43,7 +43,7 @@ export default function BalanceChart() {
           <Text style={styles.legendText}>Bulan ini</Text>
         </View>
         <Text style={styles.legendAmount}>
-          {formatCurrency(balanceHistory[balanceHistory.length - 1].amount)}
+          {balanceHistory.length > 0 ? formatCurrency(balanceHistory[balanceHistory.length - 1].amount) : '—'}
         </Text>
       </View>
     </View>

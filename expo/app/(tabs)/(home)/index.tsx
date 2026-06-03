@@ -33,7 +33,10 @@ export default function HomeScreen() {
           setUserName(savedName);
         }
         if (savedBalance) {
-          setCardBalance(parseInt(savedBalance, 10));
+          const parsed = parseInt(savedBalance, 10);
+          if (!isNaN(parsed)) {
+            setCardBalance(parsed);
+          }
         }
       } catch (error) {
         console.log('Error loading user data:', error);
@@ -52,7 +55,10 @@ export default function HomeScreen() {
             setUserName(savedName);
           }
           if (savedBalance) {
-            setCardBalance(parseInt(savedBalance, 10));
+            const parsed = parseInt(savedBalance, 10);
+            if (!isNaN(parsed)) {
+              setCardBalance(parsed);
+            }
           }
         } catch (error) {
           console.log('Error refreshing data:', error);
